@@ -30,6 +30,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(string(exported))
-	fmt.Println(string(unexported))
+	fmt.Println(string(exported))   // {"Name":"test","Surnname":"test"}
+	fmt.Println(string(unexported)) // {}
 }
