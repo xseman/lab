@@ -24,6 +24,9 @@ const (
 	BAR = 0
 )
 
+// can't use implicit (:=) syntax
+// const PI := 3.14;
+
 func main() {
 	// FOO()
 
