@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>TODO list for user: {{ .User }}</p>
+        <table>
+            <tr>
+                <td>Task</td>
+                <td>Done</td>
+            </tr>
+            {{ with .List }}
+                {{ range . }}
+                <tr>
+                    <td>Name: {{ .Name }}</td>
+                    <td>Done: {{ if .Done }}Yes{{ else }}No{{ end }}</td>
+                </tr>
+                {{ end }}
+            {{ end }}
+        </table>
+    </body>
+</html>
