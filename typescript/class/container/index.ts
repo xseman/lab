@@ -1,28 +1,28 @@
 class Container {
-    private _foo?: Foo;
-    private _bar?: Bar;
+	private _foo?: ServiceOne;
+	private _bar?: ServiceTwo;
 
-    foo(): Foo {
-        return this._foo || (this._foo = new Foo(this));
-    }
+	serviceOne(): ServiceOne {
+		return this._foo || (this._foo = new ServiceOne(this));
+	}
 
-    bar(): Bar {
-        return this._bar || (this._bar = new Bar(this));
-    }
+	serviceTwo(): ServiceTwo {
+		return this._bar || (this._bar = new ServiceTwo(this));
+	}
 }
 
-class Foo {
-    constructor(private container: Container) { }
+class ServiceOne {
+	constructor(private container: Container) {}
 
-    message() {
-        console.log("Hello world");
-    }
+	message() {
+		console.log("Hello world");
+	}
 }
 
-class Bar {
-    constructor(private container: Container) { }
+class ServiceTwo {
+	constructor(private container: Container) {}
 
-    fooMessage() {
-        this.container.foo().message();
-    }
+	fooMessage() {
+		this.container.serviceOne().message();
+	}
 }
