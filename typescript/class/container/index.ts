@@ -1,13 +1,13 @@
 class Container {
-	private _foo?: ServiceOne;
-	private _bar?: ServiceTwo;
+	private _serviceOne?: ServiceOne;
+	private _serviceTwo?: ServiceTwo;
 
 	serviceOne(): ServiceOne {
-		return this._foo || (this._foo = new ServiceOne(this));
+		return this._serviceOne || (this._serviceOne = new ServiceOne(this));
 	}
 
 	serviceTwo(): ServiceTwo {
-		return this._bar || (this._bar = new ServiceTwo(this));
+		return this._serviceTwo || (this._serviceTwo = new ServiceTwo(this));
 	}
 }
 
