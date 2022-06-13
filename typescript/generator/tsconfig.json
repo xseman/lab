@@ -1,0 +1,6 @@
+{
+	"compilerOptions": {
+		"lib": ["ESNext", "dom"],
+		"downlevelIteration": true
+	}
+}
