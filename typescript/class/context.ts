@@ -1,4 +1,4 @@
-class Service {
+export class Service {
 	private message = "Hello world!";
 
 	constructor() {

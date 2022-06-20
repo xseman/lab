@@ -1,4 +1,4 @@
-class Container {
+export class Container {
 	private _serviceOne?: ServiceOne;
 	private _serviceTwo?: ServiceTwo;
 
@@ -11,7 +11,7 @@ class Container {
 	}
 }
 
-class ServiceOne {
+export class ServiceOne {
 	constructor(private container: Container) {}
 
 	message() {
@@ -19,7 +19,7 @@ class ServiceOne {
 	}
 }
 
-class ServiceTwo {
+export class ServiceTwo {
 	constructor(private container: Container) {}
 
 	fooMessage() {
