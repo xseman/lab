@@ -1,0 +1,6 @@
+#!/bin/env node
+
+const path = require("path")
+const exe = path.basename(process.argv[1])
+
+console.log("The running process:", exe)
