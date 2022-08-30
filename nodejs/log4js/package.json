@@ -1,0 +1,14 @@
+{
+	"scripts": {
+		"start": "npx tsx watch ./main.ts"
+	},
+	"dependencies": {
+		"log4js": "6.6.1"
+	},
+	"devDependencies": {
+		"@types/node": ">= 18.7.0"
+	},
+	"engines": {
+		"node": ">= 18.7.0"
+	}
+}
