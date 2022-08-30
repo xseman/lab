@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"generate": "tserial --out ./generated.ts",
+		"pretest": "npm run generate",
+		"test": "npx tsx main.ts"
+	},
+	"devDependencies": {
+		"tserial": "^1.1.2"
+	}
+}
