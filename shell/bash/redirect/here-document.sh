@@ -39,3 +39,11 @@ foo:
 EOF
 
 echo "${READ}"
+
+# combined with while
+while read -r file; do
+	echo "${file}"
+done <<EOF
+	foo.sh
+	bar.sh
+EOF
