@@ -1,0 +1,26 @@
+person: &person
+    name: "John Doe"
+
+employee: &employee
+    <<: *person
+    salary: 5000
+
+---
+employee: *employee
+
+# yq -o=json ./anchor.yml
+# {
+#   	"person": {
+#   		"name": "John Doe"
+#   	},
+#   	"employee": {
+#    		"name": "John Doe",
+#    		"salary": 5000
+#   	}
+# }
+# {
+#   "employee": {
+#     "name": "John Doe",
+#     "salary": 5000
+#   }
+# }
