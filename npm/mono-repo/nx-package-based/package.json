@@ -1,0 +1,13 @@
+{
+	"name": "nx-package-based",
+	"private": true,
+	"scripts": {},
+	"dependencies": {},
+	"devDependencies": {
+		"nx": "15.2.1",
+		"typescript": "~4.9.0"
+	},
+	"workspaces": [
+		"packages/*"
+	]
+}
