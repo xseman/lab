@@ -1,0 +1,18 @@
+{
+	"type": "module",
+	"scripts": {
+		"start": "node --watch --no-warnings --loader=ts-node/esm ./main.ts",
+		"build:static": "esbuild --bundle --minify component.ts > ./static/component.js"
+	},
+	"dependencies": {
+		"@lit-labs/ssr": "~3.1.0",
+		"@webcomponents/template-shadowroot": "~0.2.0",
+		"express": "5.0.0-beta.1",
+		"lit": "~3.0.0"
+	},
+	"devDependencies": {
+		"@types/express": "~4.17.0",
+		"@types/node": "~18.18.0",
+		"ts-node": "~10.9.0"
+	}
+}
