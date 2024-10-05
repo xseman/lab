@@ -1,0 +1,12 @@
+{
+	"dependencies": {
+		"express": "latest",
+		"@types/express": "latest"
+	},
+	"scripts": {
+		"start_green": "PORT=3000 VERSION=GREEN bun ./server.ts",
+		"start_blue": "PORT=3001 VERSION=BLUE bun ./server.ts",
+		"proxy": "caddy run --config ./Caddyfile",
+		"watch": "while true; do curl http://localhost:8080; sleep 0.5; done"
+	}
+}

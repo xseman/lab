@@ -1,0 +1,3 @@
+- https://nodejs.org/api/worker_threads.html
+- https://stackoverflow.com/questions/56312692/what-is-the-difference-between-child-process-and-worker-threads
+- https://alvinlal.netlify.app/blog/single-thread-vs-child-process-vs-worker-threads-vs-cluster-in-nodejs

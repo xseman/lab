@@ -1,0 +1,12 @@
+{
+	"tasks": {
+		"start": "deno run -A ./src/main.ts",
+		"routes": "deno run -A npm:tsoa routes"
+	},
+	"fmt": {
+		"options": {
+			"lineWidth": 100,
+			"useTabs": true
+		}
+	}
+}

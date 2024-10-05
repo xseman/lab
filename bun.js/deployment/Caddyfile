@@ -1,0 +1,12 @@
+:8080 {
+	reverse_proxy / {
+		to localhost:3000
+		to localhost:3001
+		lb_policy random
+
+		health_uri /health
+		health_interval 5s
+		health_timeout 2s
+		health_status 200
+	}
+}
