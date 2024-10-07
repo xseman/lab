@@ -1,0 +1,23 @@
+name: load-balancer
+
+services:
+    # These replicas are resolved inrernally by Docker using Service Siscovery
+    # DNS, nslookup app will return N(replicas) IP addresses
+    app:
+        build: .
+        restart: unless-stopped
+        ports:
+            - "8080"
+        healthcheck:
+            test: ["CMD", "/health"]
+        deploy:
+            replicas: 2
+
+    caddy:
+        image: caddy:latest
+        ports:
+            - "8080:80"
+        user: root
+        volumes:
+            - ./Caddyfile:/etc/caddy/Caddyfile
+            - $PWD:/var/log/caddy/
