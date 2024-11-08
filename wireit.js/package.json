@@ -1,0 +1,40 @@
+{
+	"description": "monorepo experiment with wireit.js",
+	"workspaces": [
+		"packages/first",
+		"packages/second",
+		"packages/third"
+	],
+	"scripts": {
+		"build": "wireit",
+		"build:all": "wireit",
+		"build:first": "npm run -w @lab/first build",
+		"build:second": "npm run -w @lab/second build",
+		"build:third": "npm run -w @lab/third build"
+	},
+	"dependencies": {
+		"@lab/third": "*",
+		"ts-node": "~10.9.2",
+		"typescript": "~5.6.0",
+		"wireit": "~0.14.9"
+	},
+	"wireit": {
+		"build": {
+			"service": true,
+			"command": "npx ts-node index.ts",
+			"dependencies": [
+				"./packages/third:build"
+			],
+			"files": [
+				"./index.ts"
+			]
+		},
+		"build:all": {
+			"dependencies": [
+				"./packages/first:build",
+				"./packages/second:build",
+				"./packages/third:build"
+			]
+		}
+	}
+}

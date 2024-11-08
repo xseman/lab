@@ -1,0 +1,26 @@
+{
+	"name": "@lab/second",
+	"scripts": {
+		"build": "wireit"
+	},
+	"dependencies": {
+		"typescript": "^5.6.0",
+		"wireit": "~0.14.9",
+		"@lab/first": "*"
+	},
+	"wireit": {
+		"build": {
+			"command": "tsc --build",
+			"clean": "if-file-deleted",
+			"dependencies": [
+				"../first:build"
+			],
+			"files": [
+				"./*.ts"
+			],
+			"output": [
+				"./dist/*"
+			]
+		}
+	}
+}
