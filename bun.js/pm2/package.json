@@ -1,0 +1,22 @@
+{
+	"name": "app",
+	"scripts": {
+		"start": "bun run index.ts",
+		"compile": "bun build index.ts --minify --sourcemap --outfile server",
+		"build": "bun build index.ts --target=bun --format=esm --minify --sourcemap=linked --outdir .",
+		"pm2:start": "pm2 start pm2.config.js --only app",
+		"pm2:stop": "pm2 stop pm2.config.js",
+		"pm2:restart": "pm2 restart pm2.config.js",
+		"pm2:delete": "pm2 delete pm2.config.js"
+	},
+	"dependencies": {
+		"express": "^5.0.0"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.2.5",
+		"@types/express": "^5.0.0",
+		"@types/node": "^22.0.0",
+		"pm2": "6.0.5",
+		"typescript": "^5.8.2"
+	}
+}
